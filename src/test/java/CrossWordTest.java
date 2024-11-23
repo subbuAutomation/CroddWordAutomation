@@ -119,6 +119,7 @@ public class CrossWordTest {
     public void closeDriver()
     {
         driver.quit();
+        System.out.println("in close driver");
     }
 
 }
