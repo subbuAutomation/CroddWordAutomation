@@ -118,7 +118,7 @@ public class CrossWordTest {
     @AfterClass
     public void closeDriver()
     {
-        //driver.quit();
+        driver.quit();
     }
 
 }
