@@ -122,6 +122,10 @@ public class CrossWordTest {
         System.out.println("in close driver");
         System.out.println("my name is rupam");
         System.out.println("hello");
+        //addition
+        int a,b,res;
+        a=10;b=20;res=a+b;
+        System.out.println("addition of two results is: "+res);
     }
 
 }
