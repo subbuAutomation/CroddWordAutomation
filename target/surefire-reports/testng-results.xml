@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testng-results ignored="0" total="3" passed="3" failed="0" skipped="0">
+  <reporter-output>
+  </reporter-output>
+  <suite started-at="2024-11-24T11:07:12 IST" name="Surefire suite" finished-at="2024-11-24T11:07:52 IST" duration-ms="40730">
+    <groups>
+    </groups>
+    <test started-at="2024-11-24T11:07:12 IST" name="Surefire test" finished-at="2024-11-24T11:07:52 IST" duration-ms="40730">
+      <class name="CrossWordTest">
+        <test-method is-config="true" signature="setupDriver()[pri:0, instance:CrossWordTest@358c99f5]" started-at="2024-11-24T11:07:12 IST" name="setupDriver" finished-at="2024-11-24T11:07:52 IST" duration-ms="40433" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- setupDriver -->
+        <test-method signature="applySort()[pri:0, instance:CrossWordTest@358c99f5]" started-at="2024-11-24T11:07:52 IST" name="applySort" finished-at="2024-11-24T11:07:52 IST" duration-ms="7" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- applySort -->
+        <test-method signature="test1()[pri:0, instance:CrossWordTest@358c99f5]" started-at="2024-11-24T11:07:52 IST" name="test1" finished-at="2024-11-24T11:07:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test1 -->
+        <test-method signature="test3()[pri:0, instance:CrossWordTest@358c99f5]" started-at="2024-11-24T11:07:52 IST" name="test3" finished-at="2024-11-24T11:07:52 IST" duration-ms="0" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- test3 -->
+        <test-method is-config="true" signature="closeDriver()[pri:0, instance:CrossWordTest@358c99f5]" started-at="2024-11-24T11:07:52 IST" name="closeDriver" finished-at="2024-11-24T11:07:52 IST" duration-ms="204" status="PASS">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- closeDriver -->
+      </class> <!-- CrossWordTest -->
+    </test> <!-- Surefire test -->
+  </suite> <!-- Surefire suite -->
+</testng-results>

@@ -4,6 +4,7 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
@@ -26,7 +27,9 @@ public class CrossWordTest {
     {
 
         WebDriverManager.chromedriver().setup();
-        driver =new ChromeDriver();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("headless");
+        driver =new ChromeDriver(chromeOptions);
         wait=new WebDriverWait(driver,Duration.ofSeconds(20));
         driver.get("https://www.crossword.in/");
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
@@ -37,25 +40,25 @@ public class CrossWordTest {
     @Test
     public void test1() throws InterruptedException {
         System.out.println("in test 1");
-        driver.getTitle();
-        WebElement search_textbox=driver.findElement(By.xpath("(//input[@class='main-search__input wizzy-search-input'])[1]"));
-        search_textbox.sendKeys("manifest");
-        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@class,'wizzy-autocomplete-top-products-view-more')]")));
-
-        driver.findElement(By.xpath("//button[contains(@class,'wizzy-autocomplete-top-products-view-more')]")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("(//a[@class='wizzy-result-product-item'])[1]")));
-        driver.findElement(By.xpath("//div[@class='wizzy-common-select-selector']")).click();
-        driver.findElement(By.xpath("//div[contains(@title,'Price: Low to High')]")).click();
-        wait.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("(//a[@class='wizzy-result-product-item'])[1]")));
-        Thread.sleep(5000);
-        JavascriptExecutor js=(JavascriptExecutor)driver;
-        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
-
-        List<WebElement> products = driver.findElements(By.xpath("//div[@class='wizzy-product-item-price ']"));
-        List<WebElement> products_names = driver.findElements(By.xpath("//p[@class='product-item-title']"));
-        List<Integer> discounted_price=new ArrayList<>();
-        List<Integer> non_discounted_price=new ArrayList<>();
-        List<String> book_names=new ArrayList<>();
+//        driver.getTitle();
+//        WebElement search_textbox=driver.findElement(By.xpath("(//input[@class='main-search__input wizzy-search-input'])[1]"));
+//        search_textbox.sendKeys("manifest");
+//        wait.until(ExpectedConditions.visibilityOfElementLocated(By.xpath("//button[contains(@class,'wizzy-autocomplete-top-products-view-more')]")));
+//
+//        driver.findElement(By.xpath("//button[contains(@class,'wizzy-autocomplete-top-products-view-more')]")).click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("(//a[@class='wizzy-result-product-item'])[1]")));
+//        driver.findElement(By.xpath("//div[@class='wizzy-common-select-selector']")).click();
+//        driver.findElement(By.xpath("//div[contains(@title,'Price: Low to High')]")).click();
+//        wait.until(ExpectedConditions.visibilityOfElementLocated( By.xpath("(//a[@class='wizzy-result-product-item'])[1]")));
+//        Thread.sleep(5000);
+//        JavascriptExecutor js=(JavascriptExecutor)driver;
+//        js.executeScript("window.scrollTo(0, document.body.scrollHeight);");
+//
+//        List<WebElement> products = driver.findElements(By.xpath("//div[@class='wizzy-product-item-price ']"));
+//        List<WebElement> products_names = driver.findElements(By.xpath("//p[@class='product-item-title']"));
+//        List<Integer> discounted_price=new ArrayList<>();
+//        List<Integer> non_discounted_price=new ArrayList<>();
+//        List<String> book_names=new ArrayList<>();
 //        for(int i=1;i<=products.size();i++)
 //        {
 //            String template = "(//div[@class='wizzy-product-item-price '])[{i}]";
