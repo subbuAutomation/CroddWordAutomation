@@ -35,6 +35,7 @@ public class CrossWordTest {
         driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
         driver.manage().window().maximize();
         System.out.println("we are in crossworld");
+        System.out.println("title-------------"+driver.getTitle());
 
     }
     @Test
